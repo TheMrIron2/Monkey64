@@ -11,7 +11,7 @@
 #include "Menu_PSP.h"
 #include "Cpu/Instructions/Instructions.h"
 
-PSP_MODULE_INFO("Cube Sample", 0, 1, 1);
+PSP_MODULE_INFO("Monkey64", 0, 1, 1);
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER|THREAD_ATTR_VFPU); // THREAD_ATTR_USER
 
 static unsigned int __attribute__((aligned(16))) list[262144];
