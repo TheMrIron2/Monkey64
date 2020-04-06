@@ -1,8 +1,35 @@
-TARGET = Main_PSP
-PSPPORT = Video_PSP.o ROM_PSP.o Helper_PSP.o Menu_PSP.o $(CORE) $(CPU) $(HLEUC)
-CPU = CPU/Memory.o CPU/Registers.o CPU/Timers.o CPU/Exceptions.o CPU/DMA.o CPU/Video.o CPU/PIF.o CPU/Textures.o
-CORE = CPU/Instructions/Core.o CPU/Instructions/COP0.o CPU/Instructions/COP1.o CPU/Instructions/RSP.o CPU/Instructions/RDPLLE.o
-HLEUC = CPU/Instructions/RSPFast3D.o CPU/Instructions/RSPF3DEX.o CPU/Instructions/RSPF3DEX2.o
+TARGET = Monkey64
+PSPPORT = \
+    Video_PSP.o \
+    ROM_PSP.o \
+    Helper_PSP.o \
+    Menu_PSP.o \
+    $(CORE) \
+    $(CPU) \
+    $(HLEUC)
+
+CPU = \
+    CPU/Memory.o \
+    CPU/Registers.o \
+    CPU/Timers.o \
+    CPU/Exceptions.o \
+    CPU/DMA.o \
+    CPU/Video.o \
+    CPU/PIF.o \
+    CPU/Textures.o
+
+CORE = \
+    CPU/Instructions/Core.o \
+    CPU/Instructions/COP0.o \
+    CPU/Instructions/COP1.o \
+    CPU/Instructions/RSP.o \
+    CPU/Instructions/RDPLLE.o
+
+HLEUC = \
+    CPU/Instructions/RSPFast3D.o \
+    CPU/Instructions/RSPF3DEX.o \
+    CPU/Instructions/RSPF3DEX2.o
+
 OBJS = main.o $(PSPPORT)
 
 INCDIR =

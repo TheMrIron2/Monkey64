@@ -6,16 +6,16 @@
  * Copyright (c) 2005 Jesper Svennevid
  */
 
-#include "Main_Psp.h"
-#include "Video_Psp.h"
-#include "Menu_Psp.h"
+#include "Main_PSP.h"
+#include "Video_PSP.h"
+#include "Menu_PSP.h"
 #include "Cpu/Instructions/Instructions.h"
 
 PSP_MODULE_INFO("Cube Sample", 0, 1, 1);
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER|THREAD_ATTR_VFPU); // THREAD_ATTR_USER
 
 static unsigned int __attribute__((aligned(16))) list[262144];
-unsigned int __attribute__((aligned(16))) iPspFrameBuffer = 0;
+unsigned int __attribute__((aligned(16))) iPSPFrameBuffer = 0;
 
 void DisableFPUExceptions( void );
 
@@ -77,10 +77,10 @@ int main(int argc, char* argv[])
 			iCurrentMode = RunCpu();
 			//SetupDispList( 2 );
 
-			if( iPspFrameBuffer )
+			if( iPSPFrameBuffer )
 			{
 				sceGuSwapBuffers();
-				iPspFrameBuffer ^= 1;
+				iPSPFrameBuffer ^= 1;
 			}
 		}
 	}
@@ -123,7 +123,7 @@ void SetupDispList( int iMode )
 
 		//sceDisplayWaitVblankStart();
 		sceGuSwapBuffers();
-		iPspFrameBuffer ^= 1;
+		iPSPFrameBuffer ^= 1;
 	}
 }
 
