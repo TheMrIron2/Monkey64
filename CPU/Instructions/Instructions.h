@@ -81,8 +81,8 @@ extern void ByteSwap32( void* out, void* in );
 
 //* Basic CPU
 void PrintOpcode ( int iClose );		//* Print Executed Opcode (for debugging)
-void RunCpuInstruction ( void );		//* Run A Single Cpu Instruction
-int RunCpu ( void );					//* Run Cpu Emulation
+void RunCPUInstruction ( void );		//* Run A Single CPU Instruction
+int RunCPU ( void );					//* Run CPU Emulation
 void ProcPermLoop ( void );				//* Process a Permanent Loop
 void Op_NI ( void );					//* Instruction: No Instruction
 
@@ -103,8 +103,8 @@ void RunRdp ( void );					//* Run Rdp Emulation
 void RdpOp_NI ( void );					//* Instruction: No Rdp Instruction
 
 //* Core
-void Op_Extended ( void );	//* Instruction: Performs Cpu Extended / Extra Instruction
-void Op_Regimm ( void );	//* Instruction: Performs Cpu Regimm Instruction
+void Op_Extended ( void );	//* Instruction: Performs CPU Extended / Extra Instruction
+void Op_Regimm ( void );	//* Instruction: Performs CPU Regimm Instruction
 void Op_J ( void );			//* Instruction: Jump Instruction
 void Op_JAL ( void );		//* Instruction: Jump And Link Instruction
 void Op_BEQ ( void );		//* Instruction: Branch if Equal Instruction
@@ -118,7 +118,7 @@ void Op_SLTIU ( void );		//* Instruction: SLT Immediate Unsigned Instruction
 void Op_ANDI ( void );		//* Instruction: And Immediate Instruction
 void Op_ORI ( void );		//* Instruction: Or Immediate Instruction
 void Op_XORI ( void );		//* Instruction: XOr Immediate Instruction
-void Op_LUI ( void );		//* Instruction: LUI Cpu Instruction
+void Op_LUI ( void );		//* Instruction: LUI CPU Instruction
 void Op_Cop0 ( void );		//* Instruction: Perferform Cop0 Instruction
 void Op_Cop1 ( void );		//* Instruction: Perferform Cop1 Instruction
 void Op_BEQL ( void );		//* Instruction: Branch if Equal L Instruction
@@ -126,26 +126,26 @@ void Op_BNEL ( void );		//* Instruction: Branch if Not Equal L Instruction
 void Op_BLEZL ( void );		//* Instruction: Branch if Less than or Equal to Zero L Instruction 
 void Op_BGTZL ( void );		//* Instruction: Branch if Greater than Zero L Instruction
 void Op_DADDIU ( void );	//* Instruction: Double Add Immediate Unsigned Instruction
-void Op_LB ( void );		//* Instruction: Load Byte Cpu Instruction
-void Op_LH ( void );		//* Instruction: Load Halfword Cpu Instruction
-void Op_LWL ( void );		//* Instruction: Load Word Left Cpu Instruction
-void Op_LW ( void );		//* Instruction: Load Word Cpu Instruction
-void Op_LBU ( void );		//* Instruction: Load Byte Unsigned Cpu Instruction
-void Op_LHU ( void );		//* Instruction: Load Halfword Unsigned Cpu Instruction
-void Op_LWR ( void );		//* Instruction: Load Word Right Cpu Instruction
-void Op_LWU ( void );		//* Instruction: Load Word Unsigned Cpu Instruction
-void Op_SB ( void );		//* Instruction: Store Byte Cpu Instruction
-void Op_SH ( void );		//* Instruction: Store Halfword Cpu Instruction
-void Op_SWL ( void );		//* Instruction: Store Word Left Cpu Instruction
-void Op_SW ( void );		//* Instruction: Store Word Cpu Instruction
-void Op_SWR ( void );		//* Instruction: Store Word Right Cpu Instruction
+void Op_LB ( void );		//* Instruction: Load Byte CPU Instruction
+void Op_LH ( void );		//* Instruction: Load Halfword CPU Instruction
+void Op_LWL ( void );		//* Instruction: Load Word Left CPU Instruction
+void Op_LW ( void );		//* Instruction: Load Word CPU Instruction
+void Op_LBU ( void );		//* Instruction: Load Byte Unsigned CPU Instruction
+void Op_LHU ( void );		//* Instruction: Load Halfword Unsigned CPU Instruction
+void Op_LWR ( void );		//* Instruction: Load Word Right CPU Instruction
+void Op_LWU ( void );		//* Instruction: Load Word Unsigned CPU Instruction
+void Op_SB ( void );		//* Instruction: Store Byte CPU Instruction
+void Op_SH ( void );		//* Instruction: Store Halfword CPU Instruction
+void Op_SWL ( void );		//* Instruction: Store Word Left CPU Instruction
+void Op_SW ( void );		//* Instruction: Store Word CPU Instruction
+void Op_SWR ( void );		//* Instruction: Store Word Right CPU Instruction
 void Op_CACHE ( void );		//* Instruction: Cache Instruction
 void Op_LWC1 ( void );		//* Instruction: Load Word to Cop1 Register Instruction
 void Op_LDC1 ( void );		//* Instruction: Load Double Word to Cop1 Register Instruction
-void Op_LD ( void );		//* Instruction: Load Double Word Cpu Instruction
+void Op_LD ( void );		//* Instruction: Load Double Word CPU Instruction
 void Op_SWC1 ( void );		//* Instruction: Store Word to Cop1 Register Instruction
 void Op_SDC1 ( void );		//* Instruction: Store Double Word to Cop1 Register Instruction
-void Op_SD ( void );		//* Instruction: Store Double Word Cpu Instruction
+void Op_SD ( void );		//* Instruction: Store Double Word CPU Instruction
 
 //* Core Extended
 void Op_SLL ( void );		//* Instruction: Shift Left L Extended Instruction

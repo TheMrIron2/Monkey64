@@ -3,13 +3,13 @@
 //////////////////////////////////////////////////////////////////////////
 // Everything that has to deal with Rendering to the PSP
 
-#include "Main_Psp.h"
-#include "Video_Psp.h"
-#include "Helper_Psp.h"
-#include "Cpu/Registers.h"
-#include "Cpu/Memory.h"
-#include "Cpu/Exceptions.h"
-#include "Cpu/Video.h"
+#include "Main_PSP.h"
+#include "Video_PSP.h"
+#include "Helper_PSP.h"
+#include "CPU/Registers.h"
+#include "CPU/Memory.h"
+#include "CPU/Exceptions.h"
+#include "CPU/Video.h"
 
 // Varibles
 //////////////////////////////////////////////////////////////////////////
@@ -29,7 +29,7 @@ int iScreenShotCount = 0;
 //////////////////////////////////////////////////////////////////////////
 void DrawFramebuffer ( void )
 {
-	int *buf32 = (int*)( (char *)sceGeEdramGetAddr() ); //+ ( iPspFrameBuffer * FRAME_SIZE ) );
+	int *buf32 = (int*)( (char *)sceGeEdramGetAddr() ); //+ ( iPSPFrameBuffer * FRAME_SIZE ) );
 	int i, j;
 
 	WORD uColor = 0;
@@ -210,10 +210,10 @@ void ResetDisplay ( void )
 
 	iCopyCfbToDisp = 1;
 
-	//if( iPspFrameBuffer == 0 )
+	//if( iPSPFrameBuffer == 0 )
 	//{
 	//	sceGuSwapBuffers();
-	//	iPspFrameBuffer = 0;
+	//	iPSPFrameBuffer = 0;
 	//}
 }
 

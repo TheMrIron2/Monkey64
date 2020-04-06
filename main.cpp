@@ -9,7 +9,7 @@
 #include "Main_PSP.h"
 #include "Video_PSP.h"
 #include "Menu_PSP.h"
-#include "Cpu/Instructions/Instructions.h"
+#include "CPU/Instructions/Instructions.h"
 
 PSP_MODULE_INFO("Monkey64", 0, 1, 1);
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER|THREAD_ATTR_VFPU); // THREAD_ATTR_USER
@@ -25,16 +25,16 @@ int main(int argc, char* argv[])
 
 	SetupCallbacks();
 
-	//* setup GU
-	sceGuInit();
-
-	sceGuStart(GU_DIRECT,list);
-	sceGuDrawBuffer(GU_PSM_8888,(void*)FRAME_SIZE,BUF_WIDTH);
-	sceGuDispBuffer(SCR_WIDTH,SCR_HEIGHT,(void*)0,BUF_WIDTH);
-	sceGuDepthBuffer((void*)(FRAME_SIZE * 2),BUF_WIDTH);
-	sceGuOffset(2048 - (SCR_WIDTH/2),2048 - (SCR_HEIGHT/2));
-	sceGuViewport(2048,2048,320,240);
-	sceGuDepthRange(65535,0);
+	// setup GU
+    sceGuInit();
+    
+    sceGuStart(GU_DIRECT,list);
+    sceGuDrawBuffer(GU_PSM_8888,(void*)FRAME_SIZE,BUF_WIDTH);
+    sceGuDispBuffer(SCR_WIDTH,SCR_HEIGHT,(void*)0,BUF_WIDTH);
+    sceGuDepthBuffer((void*)(FRAME_SIZE * 2),BUF_WIDTH);
+    sceGuOffset(2048 - (SCR_WIDTH/2),2048 - (SCR_HEIGHT/2));
+    sceGuViewport(2048,2048,320,240);
+    sceGuDepthRange(65535,0);
 	//sceGuScissor(0,0,SCR_WIDTH,SCR_HEIGHT);
 	sceGuScissor(80,16,400,256);
 	sceGuEnable(GU_SCISSOR_TEST);
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 		{
 			ClearDisplay();
 			//SetupDispList( 1 );
-			iCurrentMode = RunCpu();
+			iCurrentMode = RunCPU();
 			//SetupDispList( 2 );
 
 			if( iPSPFrameBuffer )

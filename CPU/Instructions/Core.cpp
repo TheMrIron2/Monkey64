@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////////
-// Cpu Core
+// CPU Core
 //////////////////////////////////////////////////////////////////////////
 // Everything that has to deal with the Core
 
@@ -302,14 +302,14 @@ void Op_NI ( void )
 	iEmulatorRunning = 0;
 }
 
-// Instruction: Extended ( Performs Cpu Extended / Extra Instruction )
+// Instruction: Extended ( Performs CPU Extended / Extra Instruction )
 //////////////////////////////////////////////////////////////////////////
 void Op_Extended ( void )
 {
 	OpcodeSet_Extended[InstrOpcode.funct]();
 }
 
-// Instruction: Regimm ( Performs Cpu Regimm Instruction )
+// Instruction: Regimm ( Performs CPU Regimm Instruction )
 //////////////////////////////////////////////////////////////////////////
 void Op_Regimm ( void )
 {
@@ -326,7 +326,7 @@ void Op_J ( void )
 		ProcPermLoop();
 
 	N64Regs->PC += 4;
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -344,7 +344,7 @@ void Op_JAL ( void )
 		ProcPermLoop();
 
 	N64Regs->PC += 4;
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -364,7 +364,7 @@ void Op_BEQ ( void )
 	if( JumpAddress == N64Regs->PC - 4 )
 		ProcPermLoop();
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -384,7 +384,7 @@ void Op_BNE ( void )
 	if( JumpAddress == N64Regs->PC - 4 )
 		ProcPermLoop();
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -404,7 +404,7 @@ void Op_BLEZ ( void )
 	if( JumpAddress == N64Regs->PC - 4 )
 		ProcPermLoop();
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 	
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -424,7 +424,7 @@ void Op_BGTZ ( void )
 	if( JumpAddress == N64Regs->PC - 4 )
 		ProcPermLoop();
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 	
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -525,7 +525,7 @@ void Op_XORI ( void )
 	N64Regs->PC += 4;
 }
 
-// Instruction: LUI ( LUI Cpu Instruction )
+// Instruction: LUI ( LUI CPU Instruction )
 //////////////////////////////////////////////////////////////////////////
 void Op_LUI ( void )
 {
@@ -554,7 +554,7 @@ void Op_BEQL ( void )
 		if( JumpAddress == N64Regs->PC - 4 )
 			ProcPermLoop();
 
-		RunCpuInstruction();
+		RunCPUInstruction();
 		N64Regs->PC = JumpAddress;
 	}
 	else
@@ -577,7 +577,7 @@ void Op_BNEL ( void )
 		if( JumpAddress == N64Regs->PC - 4 )
 			ProcPermLoop();
 
-		RunCpuInstruction();
+		RunCPUInstruction();
 		N64Regs->PC = JumpAddress;
 	}
 	else
@@ -600,7 +600,7 @@ void Op_BLEZL ( void )
 		if( JumpAddress == N64Regs->PC - 4 )
 			ProcPermLoop();
 
-		RunCpuInstruction();
+		RunCPUInstruction();
 		N64Regs->PC = JumpAddress;
 	}
 	else
@@ -623,7 +623,7 @@ void Op_BGTZL ( void )
 		if( JumpAddress == N64Regs->PC - 4 )
 			ProcPermLoop();
 
-		RunCpuInstruction();
+		RunCPUInstruction();
 		N64Regs->PC = JumpAddress;
 	}
 	else
@@ -955,7 +955,7 @@ void Op_JR ( void )
 		ProcPermLoop();
 
 	N64Regs->PC += 4;
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -972,7 +972,7 @@ void Op_JALR ( void )
 		ProcPermLoop();
 
 	N64Regs->PC += 4;
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -1344,7 +1344,7 @@ void Op_BLTZ ( void )
 	if( JumpAddress == N64Regs->PC - 4 )
 		ProcPermLoop();
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 
@@ -1365,7 +1365,7 @@ void Op_BGEZ ( void )
 	if( JumpAddress == N64Regs->PC - 4 )
 		ProcPermLoop();
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 
@@ -1384,7 +1384,7 @@ void Op_BLTZL ( void )
 		if( JumpAddress == N64Regs->PC - 4 )
 			ProcPermLoop();
 
-		RunCpuInstruction();
+		RunCPUInstruction();
 		N64Regs->PC = JumpAddress;
 	}
 	else
@@ -1407,7 +1407,7 @@ void Op_BGEZL ( void )
 		if( JumpAddress == N64Regs->PC - 4 )
 			ProcPermLoop();
 
-		RunCpuInstruction();
+		RunCPUInstruction();
 		N64Regs->PC = JumpAddress;
 	}
 	else
@@ -1431,7 +1431,7 @@ void Op_BLTZAL ( void )
 	else
 		JumpAddress = N64Regs->PC + 4;
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 
@@ -1451,7 +1451,7 @@ void Op_BGEZAL ( void )
 	else
 		JumpAddress = N64Regs->PC + 4;
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 
@@ -1517,9 +1517,9 @@ void Op_L()
 	OpcodeSet_Cop1_L[InstrOpcode.funct]();
 }
 
-// Run Cpu Instruction
+// Run CPU Instruction
 //////////////////////////////////////////////////////////////////////////
-void RunCpuInstruction( void )
+void RunCPUInstruction( void )
 {
 	//* Update Count Register
 	N64Regs->COP0[9] += 2; //CountPerOp;
@@ -1548,9 +1548,9 @@ void RunCpuInstruction( void )
 	iNextJump = 0;
 }
 
-// Run Cpu Emulation
+// Run CPU Emulation
 //////////////////////////////////////////////////////////////////////////
-int RunCpu( void )
+int RunCPU( void )
 {
 	DWORD PrevPCC = N64Regs->PC;
 	SceCtrlData PadInput;

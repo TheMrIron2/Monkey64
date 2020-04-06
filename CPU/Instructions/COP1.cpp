@@ -120,7 +120,7 @@ void Op_BC1F ( void )
 	else
 		JumpAddress = N64Regs->PC + 4;
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -139,7 +139,7 @@ void Op_BC1T ( void )
 	else
 		JumpAddress = N64Regs->PC + 4;
 
-	RunCpuInstruction();
+	RunCPUInstruction();
 
 	N64Regs->PC = JumpAddress;
 	N64Regs->iCheckTimers = 1;
@@ -156,7 +156,7 @@ void Op_BC1FL ( void )
 		N64Regs->PC += 4;
 		JumpAddress = N64Regs->PC + ( (short)InstrOpcode.offset << 2 );
 
-		RunCpuInstruction();
+		RunCPUInstruction();
 
 		N64Regs->PC = JumpAddress;
 	}
@@ -177,7 +177,7 @@ void Op_BC1TL ( void )
 		N64Regs->PC += 4;
 		JumpAddress = N64Regs->PC + ( (short)InstrOpcode.offset << 2 );
 
-		RunCpuInstruction();
+		RunCPUInstruction();
 
 		N64Regs->PC = JumpAddress;
 	}
