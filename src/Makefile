@@ -34,7 +34,7 @@ HLEUC = \
 OBJS = main.o $(PSPPORT)
 
 INCDIR   =
-CFLAGS   = -O2 -G0 -Wall
+CFLAGS   = -O1 -G0 -Wall
 CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
 ASFLAGS  = $(CFLAGS)
 
