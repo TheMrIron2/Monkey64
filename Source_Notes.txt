@@ -1,0 +1,46 @@
+////////////////////////////////////////////////////////
+// Monkey 64 v2.0 (Source Notes)
+////////////////////////////////////////////////////////
+// Monkey 64 by PSMonkey
+// -- http://nemo.dcemu.co.uk/ --
+
+
+// NOTE (To WTF?!?! of PSPU)
+////////////////////////////////////////////////////////
+Search the code for this and disable the cache functions that follow it. Also in the texture.cpp, disable the
+texture flush that follows a dcache writeback. Search "//* NOTE - Disable here WTF?!?!?!"
+
+// NOTE 
+////////////////////////////////////////////////////////
+Sorry things are messy. I promissed src and I Was going to
+try cleaning things up but I dont have time at the moment still.
+
+If you need suport, Please get a hold of me at one of the following forums:
+
+Nemo.dcemu.co.uk - PSmonkey
+http://forums.qj.net/forumdisplay.php?f=48 - Nexis2600
+
+// To Compile
+////////////////////////////////////////////////////////
+Install psp sdk. Simplest way to do this is download the sdk installer form www.devkitpro.org.
+Run the buildme.bat file (or execute the makefile).
+
+// Credits
+////////////////////////////////////////////////////////
+Thanks to the following people or projects where I was able to figure out what I needed to acomplish this emu.
+
+CPU Emulation
+Project64 - http://www.pj64.net/main/ (Interpreter Emulation, Dma, Timers, Memory)
+Mupen64 - http://mupen64.emulation64.com/ (Instruction list, Tlb Emulation)
+Nincest - No Site (Getting the idea to finaly attempt this)
+
+Rsp Hle (Heavly based v0.3 src, texture conversion code ported from 0.3 & 0.41
+glN64 - http://gln64.emulation64.com/
+
+PSP Development
+Sdk & Suport - www.ps2dev.org
+
+N64 Technical Information
+Zilmar - http://www.pj64.net/main/
+Lac - http://www.nemu.com/
+Docs - www.dextrose.com

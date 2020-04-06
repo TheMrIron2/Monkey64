@@ -1,0 +1,28 @@
+//////////////////////////////////////////////////////////////////////////
+// Helper Functions
+//////////////////////////////////////////////////////////////////////////
+// Helper Functions
+
+#ifndef _HELPER_PSP_H_
+#define _HELPER_PSP_H_
+
+// Include Fies
+//////////////////////////////////////////////////////////////////////////
+#include "StdInc.h"
+
+// Functions
+//////////////////////////////////////////////////////////////////////////
+
+//* Wait For Input
+int WaitForInput( u16 uInputButton );
+
+//* Pause On Input
+void PauseOnInput( u16 uInputButton );
+
+//* Find Files
+void FindFiles( SceIoDirent* dlist, char* szSubDir, int* iFoundItems, int iSearchType );
+
+//* Dump to File
+void DumpToFile( void* pData, int iSize, char* szFile );
+
+#endif

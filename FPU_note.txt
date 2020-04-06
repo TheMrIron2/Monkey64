@@ -1,0 +1,13 @@
+// Disable Float Exceptions
+//////////////////////////////////////////////////////////////////////////
+void DisableFPUExceptions( void )
+{
+	__asm__ volatile ( 
+			"cfc1    $2, $31\n" 
+			"lui     $8, 0x80\n" 
+			"and     $8, $2, $8\n"
+			"ctc1    $8, $31\n"  );
+}
+
+
+Make sure you use pspvfpu.h/libpspvfpu if you want your code to play nicely with other VFPU-using code.
