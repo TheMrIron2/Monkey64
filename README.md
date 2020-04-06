@@ -1,28 +1,29 @@
 # Monkey64
-A Nintendo 64 emulator for PSP. Compiles under the latest PSP toolchain thanks to a few fixes by me and Iridescent Rose.
+A Nintendo 64 emulator for PSP.
 
-Original README:
+This repository (master branch) has original code from the Monkey64 2.0 release, with the only modifications being in the Makefile to compile under the latest toolchain.
 
-////////////////////////////////////////////////////////
-// Monkey 64 v2.0
-////////////////////////////////////////////////////////
-// Monkey 64 by PSMonkey
-// -- http://nemo.dcemu.co.uk/ --
+# Credits:
+- PSMonkey (http://nemo.dcemu.co.uk/)
+- Pochi
+- Zilmar & PJ64 Team (special thanks)
+- Lac
+- Strmnnrmn
+- GPF
+- $n!pR
+- Wally
+- Evab3va
+- Psyco
+- wraggster
+- Zeenbor
+- Clessy
 
-// Icon by pochi
-http://pochistyle.pspwire.net/
+## Notes
+- This emulator is in a primitive state. Commercial games run, but slowly, and glitches are present. It is running with an interpreter, with no dynamic recompiler.
+- Before loading a ROM, you must set the microcode used by the game. Selecting the wrong microcode may result in incompatibility.
+- ROMs must be located in a folder called "n64" at the root of your memory stick (or flash0 for PSP go).
 
-// NOTE 
-This emulator is not in an advance state yet. It runs commercial roms but with glitches & speed issues.
-Please give me time to be able to advance the emulator far enough to play more games at a reasonable speed.
-Please also do not bother me regarding the speed. It is running off a pure interpreter core which
-is slow. I will get a dynamic recompiler core in as soon as I can get things much further.
-
-// MICROCODE NOTE
-Please note that before running a rom  you must set the proper microcode. If you do not set the proper microcode
-the game could crash your psp or show up incorrectly. Please see compatibility.html for a list of proper microcodes
-for each game.
-
+## Original Info
 // Info
 Monkey64 is an n64 emulator started from scratch that takes the psp limitations into consideration. The
 ultimate goal is solid n64 emulation at 30-60fps on the psp. This will not come instantly but maybe 6 months 
@@ -31,7 +32,7 @@ now it will be a reality.
 At the current time Monkey64 supports a large array of n64 homebrew / PD roms that draw to the framebuffer & commercial roms.
 While not all commercial roms run & the ones that do are a bit glitchy, things are improving on a daily basis.
 
-// Change List
+// Changelog
 
 - 2.0 -
 .) Way too much to list, Commercial roms work.
@@ -81,5 +82,4 @@ Cross    - B Button
 Circle   - A Button
 
 // Thanks & Greetings
-Zilmar & PJ64 Team, Lac, Strmnnrmn, GPF, $n!pR, Wally, Evab3va, Psyco, wraggster, 
-Pochi, Zeenbor, Clessy & all at dcemu!
+Zilmar & PJ64 Team, Lac, Strmnnrmn, GPF, $n!pR, Wally, Evab3va, Psyco, wraggster, Pochi, Zeenbor, Clessy & all at dcemu!
