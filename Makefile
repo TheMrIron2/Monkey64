@@ -39,11 +39,12 @@ ASFLAGS = $(CFLAGS)
 
 LIBDIR =
 LDFLAGS =
-LIBS= -lPSPgum_vfpu -lPSPvfpu -lPSPgu -lm -lPSPpower
+LIBS= -lpspgum_vfpu -lpspvfpu -lpspgu -lm -lpsppower
 
 EXTRA_TARGETS = EBOOT.PBP
 PSP_EBOOT_TITLE = Monkey 64
 PSP_FW_VERSION = 500
+PSP_EBOOT_ICON = icons/ICON0.png
 BUILD_PRX = 1
 PSPSDK=$(shell psp-config --pspsdk-path)
 include $(PSPSDK)/lib/build.mak
