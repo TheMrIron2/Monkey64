@@ -31,12 +31,17 @@ HLEUC = \
     CPU/Instructions/RSPF3DEX.o \
     CPU/Instructions/RSPF3DEX2.o
 
-OBJS = main.o $(PSPPORT)
+CORE_SRCS = $(PSPPORT) $(CORE) $(CPU) $(HLEUC)
+SRCS			= $(CORE_SRCS)
 
 INCDIR   =
 CFLAGS   = -O1 -G0 -Wall
 CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
 ASFLAGS  = $(CFLAGS)
+
+OBJS := $(SRCS:.cpp=.o)
+OBJS := $(OBJS:.c=.o)
+OBJS := $(OBJS:.S=.o)
 
 LIBDIR  =
 LDFLAGS =
