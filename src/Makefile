@@ -1,6 +1,7 @@
 TARGET = Monkey64
 
 PSPPORT = \
+    main.cpp \
     Video_PSP.o \
     ROM_PSP.o \
     Helper_PSP.o \
@@ -31,7 +32,7 @@ HLEUC = \
     CPU/Instructions/RSPF3DEX.o \
     CPU/Instructions/RSPF3DEX2.o
 
-CORE_SRCS = $(PSPPORT) $(CORE) $(CPU) $(HLEUC)
+CORE_SRCS 		= $(PSPPORT) $(CORE) $(CPU) $(HLEUC)
 SRCS			= $(CORE_SRCS)
 
 INCDIR   =
